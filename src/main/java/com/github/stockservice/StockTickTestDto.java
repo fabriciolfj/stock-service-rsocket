@@ -1,4 +1,4 @@
-package com.github.stockservice.dto;
+package com.github.stockservice;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -9,8 +9,9 @@ import lombok.ToString;
 @ToString
 @AllArgsConstructor
 @NoArgsConstructor
-public class StockTickDto {
+public class StockTickTestDto {
 
     private String code;
     private int price;
+
 }

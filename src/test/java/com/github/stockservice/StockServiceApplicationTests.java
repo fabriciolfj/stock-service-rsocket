@@ -1,6 +1,6 @@
 package com.github.stockservice;
 
-import com.github.stockservice.dto.StockTickDto;
+
 import io.rsocket.transport.netty.client.TcpClientTransport;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,7 +20,7 @@ class StockServiceApplicationTests {
 				.transport(TcpClientTransport.create("localhost", 7070));
 
 		var flux = request.route("stock.ticks")
-				.retrieveFlux(StockTickDto.class)
+				.retrieveFlux(StockTickTestDto.class)
 				.doOnNext(System.out::println)
 				.take(12);
 
